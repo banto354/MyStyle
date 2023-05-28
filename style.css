@@ -43,6 +43,10 @@ nav {
     margin: auto 30px;
 }
 
+#hm-icon {
+    display: none;
+}
+
 main {
     display: block;
 }
@@ -159,9 +163,9 @@ main {
     width: 320px;
 }
 
-.feature-content:nth-child(2) {
-    margin: 0 10px;
-}
+/*.feature-content:nth-child(2) {*/
+/*    margin: 0 10px;*/
+/*}*/
 
 .feature-content-title {
     margin: 10px 0;
@@ -268,7 +272,114 @@ footer {
 
 @media screen and (max-width:768px) {
     header {
-        width: 90%;
         height: 50px;
     }
+    
+    .header-content {
+        width: 90%;
+    }
+    #hm-icon {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 10;
+    }
+    .menu-trigger,
+    .menu-trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+    }
+    .menu-trigger {
+        position: relative;
+        width: 50px;
+        height: 44px;
+    }
+    .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #000;
+        border-radius: 4px;
+    }
+    .menu-trigger span:nth-child(1) {
+        top: 0;
+    }
+    .menu-trigger span:nth-child(2) {
+        top: 20px;
+    }
+    .menu-trigger span:nth-child(3) {
+        bottom: 0;
+    }
+    .menu-trigger.active span:nth-child(1) {
+        -webkit-transform: translateY(20px) rotate(-45deg);
+        transform: translateY(20px) rotate(-45deg);
+        background-color: #fff;
+    }
+    .menu-trigger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-trigger.active span:nth-child(3) {
+        -webkit-transform: translateY(-20px) rotate(45deg);
+        transform: translateY(-20px) rotate(45deg);
+        background-color: #fff;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    .main-visual {
+        background-image: url(img/code.png);
+    }
+    
+    .main-visual-text-main {
+        font-size: 40px;
+    }
+    
+    .main-visual-text-sub {
+        font-size: 18px;
+    }
+    
+    .portfolio-container {
+        width: 90%;
+    }
+    
+    .portfolio-img {
+        display: block;
+    }
+    
+    
+    .portfolio-img-item:nth-child(odd) {
+        display: none;
+    }
+    
+    .portfolio-img-item:nth-child(even) {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    .portfolio-img-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .feature-container {
+        width: 90%;
+    }
+    
+    .feature-contents-box {
+        display: block;
+    }
+    
+    .feature-content {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    .feature-content:nth-child(3) {
+        margin-bottom: 0px;
+    }
+    
 }
